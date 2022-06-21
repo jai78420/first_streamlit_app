@@ -43,20 +43,12 @@ except URLError as e:
    streamlit.error()
     
 # streamlit.write('The user entered', fruit_choice)
-
 #import requests
-
 # streamlit.text(fruityvice_response.json()) #just writes the data to the screen
-
 #take the json version of the response and normalize it
-
 #output it the screen as a table
-
-
 # don't run anything past here while we troubleshoot
-streamlit.stop()
-
-
+# streamlit.stop()
 
 streamlit.header("The fruit load list contains:")
 #Snowflake-related functions
@@ -66,7 +58,6 @@ def get_fruit_load_list():
           return my_cur.fetchall()
  # Add a button to load the fruit
 if streamlit.button('Get Fruit Load List'):
-   
     my_data_rows = get_fruit_load_list()
     streamlit.dataframe(my_data_row)
 
